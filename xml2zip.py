@@ -33,17 +33,16 @@ katalog = '*.xml'
 
 for file_xml in glob.glob(katalog):
     print(file_xml)
+
     new_file = file_xml[0:-4]
-    print(new_file)
-    os.rename(file_xml, new_file)
-    file_xml = new_file
-    print(file_xml)
-    file_zip = zipfile.ZipFile(file_xml + ".zip", "w")
+    print('new_file: ', new_file)
+
+    file_zip = zipfile.ZipFile(new_file + ".zip", "w")
     file_zip.write(file_xml, compress_type=zipfile.ZIP_DEFLATED)
 
     # file_zip jest uchwytem do pliku a nie plikiem !!!!!!
 
-    print(file_xml)
+    print('file_xml: ', file_xml)
     print(file_zip)
     print('-'*50)
 
