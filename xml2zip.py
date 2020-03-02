@@ -6,10 +6,9 @@ import zipfile
 import sys
 
 print("\nKompresowanie pliku XML do ZIP.")
-
-print()
+# print()
 print("Ścieżka do bieżącej lokalizacji:\t", os.getcwd())
-print()
+# print()
 print("Zawartość bieżącego katalogu:\t", os.listdir())
 print()
 
@@ -23,6 +22,7 @@ for element in files_list:
 
 liczba_plikow_XML_w_katalogu = len(xml_files)
 print('Liczba plików XML w bieżącym katalogu:', liczba_plikow_XML_w_katalogu)
+print()
 
 if liczba_plikow_XML_w_katalogu == 0:
     print("Brak plików XML do kompresji!")
